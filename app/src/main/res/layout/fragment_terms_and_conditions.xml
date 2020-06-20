@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.procter.viewmodel.CommonViewModel" />
+    </data>
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+       android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolBar"
+            layout="@layout/toolbar_binding"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="-8dp"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:layout_height="match_parent"
+            tools:context=".fragment.TermsAndConditionsFragment">
+
+            <!-- TODO: Update blank fragment layout -->
+            <WebView
+                android:id="@+id/wvTermsAndConditions"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</layout>

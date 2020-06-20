@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity"
+    tools:openDrawer="end">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/frame"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="4dp">
+
+
+        </FrameLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/cardTabs"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <LinearLayout
+                    android:id="@+id/llHome"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ivHome"
+                        android:layout_width="@dimen/dimen_20"
+                        android:layout_height="@dimen/dimen_20"
+                        android:tint="@color/grey8"
+                        app:srcCompat="@drawable/ic_home" />
+
+                    <TextView
+                        android:id="@+id/txtHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home"
+                        android:textSize="12sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llPayment"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+
+                        android:id="@+id/ivPayment"
+                        android:layout_width="@dimen/dimen_20"
+                        android:layout_height="@dimen/dimen_20"
+                        android:tint="@color/grey8"
+                        app:srcCompat="@drawable/paymentnpng" />
+
+                    <TextView
+                        android:id="@+id/txtPayment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/payments"
+
+                        android:textSize="12sp" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/llExeutive"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+
+                        android:id="@+id/ivExecutive"
+                        android:layout_width="23sp"
+                        android:layout_height="23sp"
+                        android:tint="@color/grey8"
+                        app:srcCompat="@drawable/ic_delivery_man" />
+
+                    <TextView
+                        android:id="@+id/txtExecutive"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/executives"
+
+                        android:textSize="12sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llMore"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+
+                        android:id="@+id/ivMore"
+                        android:layout_width="@dimen/dimen_20"
+                        android:layout_height="@dimen/dimen_20"
+                        android:tint="@color/grey8"
+                        app:srcCompat="@drawable/ic_menu" />
+
+                    <TextView
+                        android:id="@+id/txtMore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="More"
+
+                        android:textSize="12sp" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--
+                    <android.support.design.widget.TabLayout
+                        android:id="@+id/tabs"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@color/white"
+                        app:tabIndicator="@null"
+                        app:tabBackground="@color/white"
+                        app:tabGravity="fill"
+                        app:tabMode="fixed">
+
+                        <android.support.design.widget.TabItem
+                            android:id="@+id/ti_news"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:icon="@drawable/ic_home"
+                            android:layout="@layout/custom_tab"
+                            android:text="@string/home"/>
+
+                        <android.support.design.widget.TabItem
+                            android:id="@+id/ti_actvity"
+                            android:layout_width="match_parent"
+                            android:background="@color/white"
+
+                            android:layout_height="match_parent"
+                            android:icon="@drawable/payment"
+                            android:layout="@layout/custom_tab"
+                            android:text="@string/payments"/>
+
+                        <android.support.design.widget.TabItem
+                            android:id="@+id/ti_chat"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+
+                            android:icon="@drawable/ic_delivery_man"
+                            android:layout="@layout/custom_tab"
+                            android:text="@string/executives"/>
+
+                        <android.support.design.widget.TabItem
+                            android:id="@+id/ti_ads"
+                            android:background="@color/white"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:icon="@drawable/ic_menu"
+                            android:layout="@layout/custom_tab"
+                            android:text="@string/more"/>
+
+
+                    </android.support.design.widget.TabLayout>-->
+
+
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:background="@color/white">
+
+
+            <include
+                android:id="@+id/header"
+                layout="@layout/tool_bar" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerMenu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dimen_16"
+                android:layout_above="@+id/llLogout"
+                android:layout_below="@+id/header"
+                android:layout_marginStart="@dimen/dimen_20"
+                android:layout_marginTop="5dp"/>
+
+            <LinearLayout
+                android:id="@+id/llLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/dimen_20"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:layout_width="@dimen/dimen_20"
+                    android:layout_height="@dimen/dimen_20"
+                    android:layout_gravity="center"
+
+                    android:src="@drawable/logout"
+                    android:tint="@color/grey8" />
+
+                <TextView
+                    android:id="@+id/txtLogout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:padding="5dp"
+                    android:text="Logout"
+                    android:textColor="@color/black1"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </com.google.android.material.navigation.NavigationView>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

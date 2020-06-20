@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F37474</color>
+    <color name="colorPrimaryDark">#F37474</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorlightwhite">#FEFEFE</color>
+    <color name="white">#FFFF</color>
+    <color name="colorblue">#70C3F4</color>
+    <color name="colorlightgray">#DAE5E9</color>
+    <color name="darkgray">#5A5A5A</color>
+    <color name="lightgray">#E6E6E6</color>
+    <color name="lightgraynew">#EAEAEA</color>
+    <color name="light_red">#F37474</color>
+    <color name="gray">#949BA9</color>
+    <color name="blacknew">#3E3E3E</color>
+    <color name="graynew">#A5A5A5</color>
+    <color name="green">#00A651</color>
+    <color name="liightgreen">#3FBD00</color>
+    <color name="darkred">#B90000</color>
+    <color name="grayynew">#F1F1F1</color>
+    <color name="grey">#E1E1E0</color>
+    <color name="darkgrey">#CCCBCB</color>
+    <color name="newgrey">#3A3737</color>
+    <color name="view">#D6D6D6</color>
+    <color name="gray2">#7F7E7E</color>
+    <color name="gray3">#B1B0B1</color>
+    <color name="transparent">#80000000</color>
+    <color name="white_transparent">#80FFFFFF</color>
+    <color name="grey4">#6F6F6F</color>
+    <color name="grey5">#F5F5F5</color>
+    <color name="grey6">#535150</color>
+    <color name="grey7">#727273</color>
+    <color name="grey8">#727C8E</color>
+    <color name="pink">#F1696A</color>
+    <color name="lightpink">#FEC4C7</color>
+    <color name="gray9">#EAEAEA</color>
+    <color name="navtyblue">#183E52</color>
+    <color name="blackn">#3E3E3E</color>
+    <color name="purple">#8A56AC</color>
+    <color name="gray10">#8D95A4</color>
+    <color name="black1">#333333</color>
+    <color name="gray11">#A2A0A0</color>
+    <color name="gray12">#A2A3A2</color>
+    <color name="black2">#525151</color>
+    <color name="colorOrange">#FF5722</color>
+    <color name="geay13">#707071</color>
+    <color name="gray14">#737D8F</color>
+    <color name="darkpurple">#241332</color>
+    <color name="purple1">#544A5D</color>
+    <color name="newblack">#232221</color>
+
+
+
+    <color name="bg_row_background">#fa315b</color>
+    <color name="item_name">#535353</color>
+    <color name="description">#a9a9a9</color>
+
+
+
+
+</resources>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context="com.procter.fragment.SelectLocationFragment">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/toolbar_header" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/select_address_details"
+        android:layout_below="@+id/header"
+        android:layout_marginBottom="-40dp">
+
+        <fragment
+            android:id="@+id/mapView"
+            class="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="-5dp"
+            android:contentDescription="@string/location"
+            app:srcCompat="@drawable/ic_current_loc" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/select_address_details"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shape_card_shadow"
+        android:elevation="20dp"
+        android:visibility="visible"
+        tools:targetApi="lollipop">
+
+        <LinearLayout
+            android:id="@+id/llMobileNu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="40dp"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@null"
+                    android:tint="@color/grey8"
+                    app:srcCompat="@drawable/ic_tracker" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="10dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/txtInputMobile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginEnd="@dimen/dimen_20"
+                        android:gravity="bottom"
+                        android:textSize="14sp">
+
+                        <EditText
+                            android:id="@+id/edtAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:background="@null"
+                            android:fontFamily="@font/poppins_regular"
+                            android:hint="@string/location"
+                            android:imeOptions="actionNext"
+                            android:inputType="textMultiLine"
+                            android:maxLines="4"
+                            android:singleLine="true"
+                            android:textColorHighlight="@color/light_red"
+                            android:textColorHint="@color/light_red"
+                            android:textCursorDrawable="@drawable/color_cursor"
+                            android:textSize="16sp"
+                            android:transformPivotX="4dp"
+                            android:translationY="5dp"
+                            tools:ignore="Autofill" />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".55dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/view" />
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="45dp"
+            android:background="@drawable/shape_btn_curve"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/next"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

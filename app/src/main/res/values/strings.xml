@@ -1,0 +1,185 @@
+<resources>
+    <string name="app_name">Poktor</string>
+    <string name="open_n_bids">Open\nBids</string>
+    <string name="bids_n_won">Bids\nWon</string>
+    <string name="pending_n_bids">Pending\nBids</string>
+    <string name="_5_25_pm_thursday">5:25 PM Thursday, May 20</string>
+
+    <string name="today_earnings">Today\'s\n Earnings</string>
+    <string name="_2_450_68">2,4450.68</string>
+    <string name="all_bids">All Bids</string>
+    <string name="watch_list">Watch List</string>
+    <string name="ramesh_n">Ramesh N</string>
+    <string name="order_id_34513">Order Id:34513</string>
+    <!--<string name="order_id"><![CDATA[<fonts color=#bcbcbc>Order ID</fonts>]]> \n%s</string>-->
+    <string name="order_id">Order ID<font fgcolor='#000000'> \n%s</font></string>
+    <string name="address">Address<font fgcolor='#000000'> \n%s</font></string>
+    <string name="_3_1_kms_7_min_away">3.1 Kms 7 min away</string>
+    <string name="_22_35">22:35</string>
+    <string name="rupees">₹</string>
+    <string name="_225">225</string>
+    <string name="mrp">MRP</string>
+    <string name="current">CURRENT</string>
+    <string name="home">Home</string>
+    <string name="payments">Payments</string>
+    <string name="chat">Chat</string>
+    <string name="timeline">Timeline</string>
+    <string name="more">More</string>
+    <string name="_1">0</string>
+    <string name="_26">26</string>
+
+
+    <string name="_4_6">4.6</string>
+    <string name="suraksha_pharmacy">Suraksha Pharmacy</string>
+    <string name="electronic_city_bangalore">Electronic City,Bangalore</string>
+    <string name="open_bids">Open Bids</string>
+    <string name="closed_bid">Closed Bid</string>
+    <string name="pending_bids">Pending Bids</string>
+    <string name="_10_june_2019_5_23_pm">10 June 2019 | 5:23 PM</string>
+    <string name="won">Won</string>
+    <string name="finaln">Final:</string>
+    <string name="_12345_78">12345.78</string>
+    <string name="all_5_orders">All (5 Orders)</string>
+
+    <string name="contact">Contact:</string>
+    <string name="_31_kms_7_min_away">31 kms 7 min away</string>
+    <string name="remaining">Remaining</string>
+    <string name="remaining_lowercase">remaining</string>
+    <string name="call">Call</string>
+    <string name="out_for_delivery">Out for delivery</string>
+    <string name="track_executive">Track Executive</string>
+    <string name="confirm">Confirm</string>
+
+    <string name="all_delivery_executives">All Delivery Executives</string>
+    <string name="_5">5</string>
+    <string name="_44">44</string>
+    <string name="_24">0</string>
+    <string name="todo">TODO</string>
+    <string name="alert">Alert</string>
+    <string name="lorem_ipsum_dolor_sit_amet_lorem_ipsum_dolor_sit_amet_lorem_ipsum_dolor">Lorem Ipsum dolor sit amet,lorem ipsum dolor sit amet lorem ipsum dolor.</string>
+
+    <string name="create_an_account">Create an account</string>
+    <string name="mobile_number">Mobile number</string>
+    <string name="sign_in">Sign In</string>
+    <string name="password">Password</string>
+    <string name="check_internet">Check Internet Connection</string>
+    <string name="welcome">Welcome!</string>
+    <string name="enter_mobile">Please Enter Mobile number</string>
+    <string name="enter_valid">Please Enter Valid Mobile nu</string>
+    <string name="enter_password">Please Enter Password</string>
+    <string name="mobile_number_verification">Mobile number verification</string>
+    <string name="resend_otp">Resend OTP</string>
+    <string name="_4_digit_otp_sent_on_above_mobile_number">4 digit OTP sent on above mobile number</string>
+    <string name="enter_otp_below">Enter OTP</string>
+    <string name="_0">0</string>
+    <string name="assigned_delivery">Assigned Delivery</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="send_otp">Send Otp</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="done">Done</string>
+    <string name="less_password_validation">Password should not less than 6 digits</string>
+    <string name="enter_confirm_pass">Enter Confirm Password</string>
+    <string name="same_pass_validate">Password and Confirm Password should be same</string>
+    <string name="enter_your_registered_mobile_number_below">Enter Your registered mobile number below</string>
+    <string name="complete_profile">Complete Profile</string>
+    <string name="full_name">Full Name</string>
+    <string name="company_name">Company Name</string>
+    <string name="create_password">Create Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="continues">Continue</string>
+    <string name="email_id">Email ID</string>
+    <string name="for_exit">Please click BACK again to exit.</string>
+
+    <!--Image Cropper-->
+    <string name="pick_image_intent_text">Choose an image</string>
+    <string name="crop_image_activity_title">Crop Image</string>
+    <string name="crop_image_menu_rotate_left">Rotate counter clockwise</string>
+    <string name="crop_image_menu_rotate_right">Rotate</string>
+    <string name="crop_image_menu_crop">Crop</string>
+    <string name="pick_image_intent_chooser_title">Select source</string>
+    <string name="result_image_desc">crop result</string>
+
+    <string name="menu1"> Camera </string>
+    <string name="menu2"> Gallery </string>
+    <string name="drop_arrow"> \u0020 &#9698; \u0020\u0020</string>
+    <string name="denied_permission">You denied permission</string>
+
+    <string name="take_photo">Take Photo</string>
+    <string name="choose_from_gallery">Choose from Gallary</string>
+    <string name="cancel">Cancel</string>
+    <string name="add_photo">Add Photo!</string>
+    <string name="select_file">Select File</string>
+    <string name="permission_granted">Permission granted successfully</string>
+    <string name="permission_denied">Permission is denied!</string>
+    <string name="less_than">Mobile number should not be less than 10 digits</string>
+    <string name="gallery">Gallery</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="enter_company">Enter Company name</string>
+    <string name="add_regis">Please Add Registration Paper</string>
+    <string name="add_owner">Please Add Owner Id Card</string>
+    <string name="add_din">Add DIN</string>
+    <string name="what_is_your_city">What is your City?</string>
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+
+    <string name="vehicle_number">Vehicle number</string>
+    <string name="company_registration_number">Company Registration number</string>
+    <string name="add_exec">Add Executive</string>
+    <string name="executives">Executives</string>
+    <string name="pharmacy_address">Pharmacy Address</string>
+    <string name="location">Location</string>
+    <string name="logout">Logout</string>
+    <string name="back_icon">back icon</string>
+    <string name="_91">+91</string>
+    <string name="save">Save</string>
+    <string name="label_document">Label Document</string>
+    <string name="upload_document">Upload Document</string>
+    <string name="delete">Delete</string>
+    <string name="close">Close</string>
+    <string name="remove">Remove</string>
+    <string name="city">City</string>
+    <string name="state">State</string>
+    <string name="add_docs">add docs</string>
+    <string name="add_more">Add More</string>
+    <string name="ok">OK</string>
+    <string name="bids">Bids</string>
+    <string name="no_bids_found">No Bids Found</string>
+    <string name="my_bid">My Bid</string>
+    <string name="rs">\u20B9 %s</string>
+    <string name="rs_symbol">\u20B9 </string>
+    <string name="closed">Closed</string>
+    <string name="lost">Lost</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="your_sales_report">Your sales report 0f %s</string>
+    <string name="hi_user">Hi, %s</string>
+    <string name="today">Today</string>
+    <string name="this_week">This Week</string>
+    <string name="this_month">This Month</string>
+    <string name="this_year">This Year</string>
+    <string name="s_no">S. No.</string>
+    <string name="description">Description</string>
+    <string name="qty">Qty</string>
+    <string name="price">Price</string>
+    <string name="time_remaining">Time Remaining</string>
+    <string name="sec">sec</string>
+    <string name="min">min</string>
+    <string name="delivered">Delivered</string>
+    <string name="out">Out For Delivery</string>
+    <string name="order_history">Order History</string>
+    <string name="no_bids">No Bids Found</string>
+    <string name="report_year">Your sales report of %s</string>
+    <string name="pharmacy_name">Pharmacy Name</string>
+    <string name="my_profile">My Profile</string>
+    <string name="assign_delivery">Assign Delivery</string>
+    <string name="assign">Assign</string>
+    <string name="amount_or_less">\u20b9 %s or less</string>
+    <string name="or_less"><font size="12">%s or less</font></string>
+    <string name="distance_travel_time">%s, %s away</string>
+    <string name="closed_bids">Closed Bids</string>
+    <string name="delivery_assigned">Delivery Assigned</string>
+
+    <!--<string name="map_key">AIzaSyDdh4JRFXLkZh9tp9QRrYnj32oY96QRQos</string>-->
+
+</resources>

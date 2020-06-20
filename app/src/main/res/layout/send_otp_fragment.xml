@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:id="@+id/llParent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="25dp"
+        android:id="@+id/ivImgBack"
+        app:srcCompat="@drawable/ic_left_arrow"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="25dp" />
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/ivImgBack"
+        android:layout_centerHorizontal="true"
+
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="35dp"
+            android:tint="@android:color/black"
+            android:id="@+id/ivMobile"
+            app:srcCompat="@drawable/ic_smartphone"
+            android:layout_height="45dp"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/mobile_number_verification"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:textSize="16sp"
+            android:id="@+id/txtMobilenu"
+            android:textColor="@android:color/black"
+            android:layout_height="wrap_content" />
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/llOtpV"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_alignParentBottom="true"
+                android:elevation="10dp"
+                android:orientation="vertical"
+                android:id="@+id/llOtp"
+                android:background="@drawable/shape_card_shadow"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="20dp"
+
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:tint="@color/newgrey"
+                        android:id="@+id/ivImg"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/ic_smartphone"
+                        android:layout_height="20dp" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/ivImg"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/edOtp1"
+                            android:layout_toRightOf="@+id/ivImg"
+
+                            android:background="@null"
+                            android:layout_marginBottom="-7dp"
+                            android:textSize="14sp"
+                            android:layout_gravity="center"
+                            android:textCursorDrawable="@drawable/color_cursor"
+
+                            android:fontFamily="@font/poppins_regular"
+                            android:hint="@string/mobile_number"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="4dp"
+                            android:layout_toRightOf="@+id/ivImg"
+                            android:layout_below="@+id/edOtp1"
+
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/edOtp"
+
+                                android:background="@null"
+                                android:textSize="16sp"
+                                android:layout_gravity="center"
+                                android:textCursorDrawable="@drawable/color_cursor"
+
+                                android:fontFamily="@font/poppins_regular"
+                                android:hint="@string/mobile_number"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                />
+
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:text="@string/resend_otp"
+                                android:gravity="right"
+                                android:id="@+id/txtResendOtp"
+                                android:textColor="@color/light_red"
+                                android:textSize="14sp"
+                                android:textAllCaps="true"
+                                android:fontFamily="@font/poppins_regular"
+                                android:layout_alignParentEnd="true"
+
+                                android:layout_gravity="right"
+                                android:layout_height="25dp" />
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="-2dp"
+                    android:background="@color/view"
+                    android:layout_marginRight="20dp"
+                    android:layout_height=".55dp"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="@string/_4_digit_otp_sent_on_above_mobile_number"
+                    android:textColor="@color/green"
+                    android:textSize="16sp"
+                    android:visibility="gone"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/poppins_regular"
+
+                    android:layout_height="25dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center"
+                        android:text="@string/enter_otp_below"
+                        android:textColor="@android:color/black"
+
+                        android:textSize="18sp" />
+
+                    <LinearLayout android:id="@+id/pin_layout"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+
+                        >
+
+
+
+                        <EditText android:id="@+id/pin_first_edittext"
+                            android:layout_width="40dp"
+                            android:layout_height="55dp"
+                            android:textColor="@color/light_red"
+                            android:inputType="number"
+                            android:textSize="18sp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:fontFamily="@font/poppins_regular"
+                            android:background="@drawable/shape_shadow_editext"
+                            style="@style/pin_edittext_style"
+                             />
+
+                        <EditText android:id="@+id/pin_second_edittext"
+                            android:layout_width="40dp"
+                            android:layout_height="55dp"
+                            android:textColor="@color/light_red"
+                            android:textSize="18sp"
+                            android:inputType="number"
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/shape_shadow_editext"
+                            style="@style/pin_edittext_style" />
+
+                        <EditText android:id="@+id/pin_third_edittext"
+                            android:layout_width="40dp"
+                            android:layout_height="55dp"
+                            android:layout_marginStart="10dp"
+                            android:textColor="@color/light_red"
+                            android:inputType="number"
+                            android:fontFamily="@font/poppins_regular"
+                            android:textSize="18sp"
+                            android:background="@drawable/shape_shadow_editext"
+                            style="@style/pin_edittext_style" />
+
+                        <EditText android:id="@+id/pin_forth_edittext"
+                            android:layout_width="40dp"
+                            android:layout_height="55dp"
+                            android:textColor="@color/light_red"
+                            android:inputType="number"
+                            android:fontFamily="@font/poppins_regular"
+                            android:textSize="18sp"
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/shape_shadow_editext"
+                            style="@style/pin_edittext_style" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="50dp"
+                    android:textSize="18sp"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginEnd="50dp"
+                    android:text="Submit"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:id="@+id/btnSubmit"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/poppins_regular"
+
+                    android:background="@drawable/shape_btn_curve"
+                    android:layout_height="45dp" />
+
+
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="orderItem"
+            type="com.procter.model.order.OrderItemsItem" />
+
+        <variable
+            name="slNo"
+            type="String" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_40"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/dimen_8"
+        android:paddingEnd="@dimen/dimen_8">
+
+        <TextView
+            android:id="@+id/tvSlNo"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:text="@{slNo}"
+            tools:text="1" />
+
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_4"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_weight="3.2"
+            android:layout_gravity="center"
+            android:textColor="@android:color/black"
+            android:text="@{orderItem.name}"
+            tools:text="Description Spuresgdsf " />
+
+        <TextView
+            android:id="@+id/tvQty"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".8"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:text="@{orderItem.quantity}"
+            tools:text="2" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="0dp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_12"
+            android:layout_weight="1.2"
+            android:layout_gravity="center"
+            android:gravity="end"
+            android:textColor="@android:color/black"
+            android:text="@{orderItem.price}"
+            tools:text="399.00" />
+    </LinearLayout>
+</layout>

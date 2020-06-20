@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.procter.fragment.WatchListFragment">
+
+    <data>
+
+        <variable
+            name="fragment"
+            type="com.procter.fragment.WatchListFragment" />
+
+        <variable
+            name="watchlist"
+            type="com.procter.model.WatchListData" />
+        <variable
+            name="assigndelivery"
+            type="com.procter.model.order.DeliveryAssign" />
+
+        <variable
+            name="adapter"
+            type="com.procter.adapter.OrderDetailsAdapter" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+
+
+
+
+        <include
+            android:id="@+id/toolBar"
+            layout="@layout/toolbar_binding" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerOpenBids"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolBar"
+            android:layout_marginTop="4dp"
+            tools:listitem="@layout/open_bids_adapter" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:id="@+id/txtWatchList"
+            android:text="No Watchlist found"
+            android:textColor="@color/light_red"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</layout>

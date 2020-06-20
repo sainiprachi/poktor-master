@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.MainActivity">
+
+    <data>
+
+        <variable
+            name="fragment"
+            type="com.procter.fragment.AssignDeliveryFragment" />
+
+        <variable
+            name="orderDetails"
+            type="com.procter.model.order.OrderDetails" />
+
+        <variable
+            name="assigndelivery"
+            type="com.procter.model.order.DeliveryAssign" />
+
+        <variable
+            name="adapter"
+            type="com.procter.adapter.OrderDetailsAdapter" />
+
+        <variable
+            name="bidAmount"
+            type="String" />
+        <variable
+            name="viewModel"
+            type="com.procter.viewmodel.OrderViewModel" />
+        <variable
+            name="min"
+            type="String" />
+        <variable
+            name="sec"
+            type="String" />
+        <variable
+            name="deliverystatus"
+            type="String" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+
+        <include
+            android:id="@+id/toolBar"
+            layout="@layout/toolbar_binding" />
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rlBottom"
+            android:layout_below="@+id/toolBar">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+
+
+                android:layout_height="wrap_content">
+
+
+                <RelativeLayout
+                    android:id="@+id/rlUserDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/toolbar"
+                    android:layout_marginStart="@dimen/dimen_8"
+                    android:layout_marginTop="@dimen/dimen_8">
+
+                    <ImageView
+                        android:id="@+id/ivProfile"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="@dimen/dimen_20"
+                        android:src="@drawable/placeholder_face_big"
+                        tools:ignore="ContentDescription" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@+id/ivProfile"
+                        android:layout_toRightOf="@+id/ivProfile"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tvName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="@{orderDetails.patientName}"
+                                android:textColor="@android:color/black"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tvOrderId"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/tvName"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:textColor="@android:color/black"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tvAddress"
+                                android:layout_width="@dimen/dimen_180"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tvOrderId"
+                                android:hint="Address"
+                                android:ellipsize="end"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:textColor="@android:color/black"
+                                android:textSize="12sp" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_centerVertical="true"
+                                android:visibility="visible"
+                                android:layout_below="@+id/tvAddress"
+
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:orientation="horizontal"
+                                    android:layout_marginTop="@dimen/dimen_10"
+                                    android:layout_centerVertical="true"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_marginTop="5dp"
+
+
+                                        android:textSize="12sp"
+                                        android:id="@+id/txtContactNu"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:text=""
+                                        android:textColor="@color/blackn"
+                                        android:layout_height="wrap_content" />
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="55dp"
+
+                                        android:layout_marginLeft="10dp"
+                                        app:cardBackgroundColor="@color/green"
+                                        app:cardCornerRadius="10dp"
+                                        android:id="@+id/cardCall"
+                                        app:cardElevation="5dp"
+                                        android:layout_gravity="center"
+                                        android:layout_height="20dp">
+
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginLeft="5dp"
+                                            android:gravity="center"
+                                            android:paddingTop="1dp"
+                                            android:layout_marginRight="5dp"
+                                            android:orientation="horizontal"
+                                            android:layout_height="wrap_content">
+
+                                            <ImageView
+                                                android:layout_width="10dp"
+                                                android:src="@drawable/ic_phone_receiver"
+                                                android:tint="@color/white"
+                                                android:layout_gravity="center"
+                                                android:layout_height="10dp" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:text="Call"
+                                                android:layout_gravity="center"
+                                                android:gravity="center"
+                                                android:paddingLeft="4dp"
+                                                android:textSize="12sp"
+
+                                                android:textColor="@android:color/white"
+                                                android:layout_height="wrap_content" />
+
+                                        </LinearLayout>
+
+                                    </androidx.cardview.widget.CardView>
+
+
+                                </LinearLayout>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="@dimen/dimen_130"
+                                    android:padding="5dp"
+                                    android:visibility="gone"
+
+                                    android:layout_marginLeft="3dp"
+                                    android:layout_marginStart="3dp"
+                                    android:layout_marginBottom="3dp"
+                                    android:layout_marginTop="3dp"
+
+
+                                    app:cardCornerRadius="@dimen/dimen_15"
+
+                                    app:cardBackgroundColor="@color/green"
+                                    android:id="@+id/cardStatus"
+                                    app:cardElevation="2dp"
+
+                                    android:gravity="center"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginEnd="@dimen/dimen_10"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_height="@dimen/dimen_30"
+                                    android:layout_alignParentEnd="true"
+                                    >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:layout_gravity="center"
+                                        android:textColor="@color/white"
+                                        android:gravity="center"
+                                        android:textAllCaps="true"
+                                        android:layout_marginTop="@dimen/dimen_1"
+                                        android:id="@+id/txtDeliveryAssign"
+                                        android:textSize="12sp"
+                                        android:text="Delivery Assigned"
+                                        android:layout_height="wrap_content" />
+
+
+
+                                </androidx.cardview.widget.CardView>
+
+
+                            </RelativeLayout>
+
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:id="@+id/llMrpTotal"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:id="@+id/llMinAmt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="3dp"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:gravity="end"
+                                        android:text="@string/mrp"
+                                        android:textColor="@color/darkgray"
+                                        android:textSize="14sp" />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginEnd="@dimen/dimen_4"
+                                            android:text="@string/rs_symbol"
+                                            android:textColor="@color/darkgray"
+                                            android:textSize="16sp" />
+
+                                        <TextView
+                                            android:id="@+id/tvMRPPrice"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="end"
+                                            android:layout_marginTop="3dp"
+                                            android:fontFamily="@font/poppins_semibold"
+                                            android:gravity="end"
+                                            android:text="@{orderDetails.totalSellingPrice}"
+                                            android:textAllCaps="true"
+                                            android:textColor="@color/darkgray"
+                                            android:textSize="14sp"
+                                            tools:text="345456" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llFinal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="3dp"
+                                        android:layout_marginLeft="3dp"
+                                        android:layout_marginTop="3dp"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:text="Final"
+                                        android:textColor="@color/darkgray"
+                                        android:textSize="14sp" />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/dimen_3"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/rs_symbol"
+                                            android:textColor="@color/colorPrimary"
+                                            android:textSize="16sp" />
+
+                                        <TextView
+                                            android:id="@+id/tvCurrentPrice"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="end"
+                                            android:layout_marginStart="3dp"
+                                            android:layout_marginTop="3dp"
+                                            android:fontFamily="@font/poppins_semibold"
+                                            android:text="@{orderDetails.pharmacyId != null ? orderDetails.totalPharmacyPrice : orderDetails.totalSellingPrice}"
+                                            android:textColor="@color/colorPrimary"
+                                            android:textSize="14sp" />
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/llView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rlUserDetail"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_35"
+                        android:layout_marginStart="@dimen/dimen_8"
+                        android:layout_marginTop="@dimen/dimen_8"
+                        android:layout_marginEnd="@dimen/dimen_8"
+                        android:background="@drawable/bg_gray_border_curved">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight=".5"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center"
+                            android:text="@string/s_no"
+                            android:textColor="@android:color/black" />
+
+                        <View
+                            android:layout_width="@dimen/dimen_1"
+                            android:layout_height="match_parent"
+                            android:background="@color/lightgray" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/dimen_4"
+                            android:layout_weight="4"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="@string/description"
+                            android:textColor="@android:color/black" />
+
+                        <View
+                            android:layout_width="@dimen/dimen_1"
+                            android:layout_height="match_parent"
+                            android:background="@color/lightgray" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight=".6"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center"
+                            android:text="@string/qty"
+                            android:textColor="@android:color/black" />
+
+                        <View
+                            android:layout_width="@dimen/dimen_1"
+                            android:layout_height="match_parent"
+                            android:background="@color/lightgray" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="@dimen/dimen_12"
+                            android:layout_weight="1.5"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="end"
+                            android:text="@string/price"
+                            android:textColor="@android:color/black" />
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvMedicineList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adapter="@{adapter}"
+                        android:orientation="vertical"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/item_medicine_order_details">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/recyclerItem"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/lightgray" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dimen_20"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/dimen_16"
+                            android:layout_weight="4"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Total Inculsive of all taxes"
+                            android:textColor="@android:color/black"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="@string/rupees"
+                            android:textSize="17sp"
+                            android:layout_marginRight="@dimen/dimen_4"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tvTotalPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="@dimen/dimen_5"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="end"
+                            android:textSize="17sp"
+                            tools:text="25" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_16"
+                    android:layout_below="@+id/llView" />
+
+
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+        <RelativeLayout
+            android:id="@+id/rlBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:orientation="horizontal"
+                    android:layout_weight=".50"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/llMrp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="MRP"
+                            android:layout_gravity="end"
+                            android:textColor="@color/darkgray"
+                            android:textSize="16sp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/dimen_4"
+                                android:text="@string/rs_symbol"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:text="@{orderDetails.totalSellingPrice}"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/viewn"
+                        android:layout_width="1dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="@dimen/dimen_20"
+                        android:layout_toEndOf="@+id/llMrp"
+                        android:background="@color/darkgray" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_20"
+                        android:layout_toEndOf="@+id/viewn"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Final"
+                            android:textColor="@color/darkgray"
+                            android:textSize="16sp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/dimen_4"
+                                android:text="@string/rs_symbol"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:text="@{orderDetails.pharmacyId != null ? orderDetails.totalPharmacyPrice : orderDetails.totalSellingPrice}"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <RelativeLayout
+                    android:id="@+id/rlAssignDelivery"
+                    android:layout_width="0dp"
+                    android:layout_weight=".50"
+
+                    android:layout_alignParentRight="true"
+                    android:layout_height="45dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/shape_light_red">
+
+                    <LinearLayout
+                        android:id="@+id/llEnterAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/dimen_40"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:id="@+id/edtAssignDelivery"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_3"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/dimen_4"
+                            android:fontFamily="@font/poppins_regular"
+                            android:singleLine="true"
+                            android:maxLines="1"
+
+                            android:ellipsize="end"
+                            android:gravity="bottom"
+                            android:paddingTop="@dimen/dimen_4"
+                            android:text="Assign delivery"
+                            android:textSize="@dimen/font_16"
+                            android:textColorHint="@color/white"
+                            android:textColor="@color/white"
+                            />
+
+                        <!--<TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:layout_marginStart="@dimen/dimen_4"
+                            android:text="@string/or_less"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_16" />-->
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/dimen_35"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/dimen_5"
+
+
+                        android:background="@drawable/shape_btn_white"
+
+                        android:layout_height="@dimen/dimen_35">
+
+
+                        <ImageView
+                            android:id="@+id/ibBid"
+                            android:layout_width="@dimen/dimen_25"
+                            android:layout_height="@dimen/dimen_25"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            app:srcCompat="@drawable/deliveryboy">
+
+                        </ImageView>
+
+
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+     * Drop Shadow Stack with shape
+     * for particular corner curve, change radius of each
+        item to the particular corner radius
+     * for shadow to appear in particular side, remove other sides
+        from padding
+    -->
+
+    <item>
+        <shape>
+
+
+            <solid android:color="#9e9e9e" />
+
+            <corners android:bottomLeftRadius="@dimen/card_radius" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+
+
+            <solid android:color="#c3c3c3" />
+
+            <corners android:bottomLeftRadius="@dimen/card_radius" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <padding
+                android:bottom="0.5dp"
+                />
+
+            <solid android:color="#8b8b8b" />
+
+            <corners android:bottomLeftRadius="@dimen/card_radius" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <padding
+                android:bottom="0.5dp"
+                />
+
+
+            <solid android:color="#777777" />
+
+            <corners android:bottomLeftRadius="@dimen/card_radius" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <padding
+                android:bottom="0.5dp"
+                />
+
+            <solid android:color="#646464" />
+
+            <corners android:bottomLeftRadius="@dimen/card_radius" />
+        </shape>
+    </item>
+
+    <item>
+        <shape>
+            <corners android:bottomLeftRadius="@dimen/card_radius" />
+            <solid android:color="#515151" />
+            <padding android:bottom="0.5dp"  />
+        </shape>
+    </item>
+
+    <!-- Background layer - change solid color for background color -->
+
+    <item>
+
+        <shape>
+
+            <solid android:color="#EAEAEA" />
+            <padding
+                android:bottom="0.5dp"
+                />
+            <corners android:bottomLeftRadius="@dimen/card_radius" />
+
+        </shape>
+
+
+
+    </item>
+
+</layer-list>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:focusableInTouchMode="true"
+    android:background="@color/white"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar_header"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="@string/all_5_orders"
+            android:textSize="18sp"
+            android:id="@+id/txtCountOrder"
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginEnd="20dp"
+
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_marginEnd="@dimen/dimen_20"
+                android:src="@drawable/sort"
+                android:layout_height="30dp" />
+
+
+            <ImageView
+                android:layout_width="30dp"
+                android:tint="@color/gray12"
+                android:src="@drawable/ic_filter"
+                android:layout_height="30dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="20dp"
+
+        android:background="@color/lightgray"
+        android:layout_height="1dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="20dp" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/recyclerOrder"
+        android:layout_marginTop="@dimen/dimen_8"
+        tools:listitem="@layout/all_order_adapter"
+
+        android:layout_height="wrap_content">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

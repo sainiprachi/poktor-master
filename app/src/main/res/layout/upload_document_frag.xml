@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/llDoc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivImgBack"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/ic_left_arrow" />
+
+        <LinearLayout
+            android:id="@+id/llCompleteProfile"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+
+
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/userProfile"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/document" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/userProfile"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:text="You are almost done! \nUpload Documents"
+                android:textColor="@color/black2"
+
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/llOtp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/llDoc"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_card_shadow"
+        android:elevation="10dp"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:scrollbars="none"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/dimen_20"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/rlRegistrationPaper"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_marginLeft="@dimen/dimen_5"
+                            android:layout_marginBottom="@dimen/dimen_5"
+                            android:layout_marginRight="@dimen/dimen_5"
+                            android:layout_marginTop="@dimen/dimen_5"
+                            android:background="@drawable/cardview_back"
+                            android:orientation="vertical"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="2dp">
+
+                            <ImageView
+                                android:id="@+id/ivAdd"
+                                android:layout_width="@dimen/dimen_40"
+                                android:layout_height="@dimen/dimen_40"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center"
+                                app:srcCompat="@drawable/ic_plus" />
+
+                            <ImageView
+                                android:id="@+id/ivSelectImage"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:scaleType="fitXY"
+                                android:visibility="gone" />
+
+
+                        </androidx.cardview.widget.CardView>
+
+
+                        <RelativeLayout
+                            android:id="@+id/rlCancelRegistration"
+                            android:layout_width="24dp"
+                            android:background="@drawable/shape_circle_white"
+                            android:layout_height="24dp"
+                            android:layout_alignParentRight="true"
+                            android:elevation="3dp"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_centerInParent="true"
+                                android:tint="@color/light_red"
+                                app:srcCompat="@drawable/ic_cancel" />
+
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rlRegistrationPaper"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center"
+                            android:text="Registration\n Paper"
+                            android:textColor="@android:color/black" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/rlIdCard"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_marginLeft="@dimen/dimen_5"
+                            android:layout_marginBottom="@dimen/dimen_5"
+                            android:layout_marginRight="@dimen/dimen_5"
+                            android:layout_marginTop="@dimen/dimen_5"
+                            android:background="@drawable/cardview_back"
+                            android:orientation="vertical"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="2sp">
+
+                            <ImageView
+                                android:id="@+id/ivAddOwner"
+                                android:layout_width="@dimen/dimen_40"
+                                android:layout_height="@dimen/dimen_40"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center"
+                                app:srcCompat="@drawable/ic_plus" />
+
+                            <ImageView
+                                android:id="@+id/ivSelectOwner"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="fitXY"
+                                android:visibility="gone" />
+
+
+                        </androidx.cardview.widget.CardView>
+
+
+                        <RelativeLayout
+                            android:id="@+id/rlCancelOwnerId"
+                            android:layout_width="24dp"
+                            android:background="@drawable/shape_circle_white"
+                            android:layout_height="24dp"
+                            android:layout_alignParentRight="true"
+                            android:elevation="3dp"
+
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_centerInParent="true"
+                                android:tint="@color/light_red"
+                                app:srcCompat="@drawable/ic_cancel" />
+
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rlIdCard"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center"
+                            android:text="Owner's\n ID Card"
+                            android:textColor="@android:color/black" />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <RelativeLayout
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/rlDin"
+                            android:layout_width="90dp"
+                            android:layout_marginLeft="@dimen/dimen_5"
+                            android:layout_marginBottom="@dimen/dimen_5"
+                            android:layout_marginRight="@dimen/dimen_5"
+                            android:layout_marginTop="@dimen/dimen_5"
+
+                            android:layout_height="90dp"
+                            android:background="@drawable/cardview_back"
+                            android:orientation="vertical"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="2sp">
+
+                            <ImageView
+                                android:id="@+id/ivAddDin"
+                                android:layout_width="@dimen/dimen_40"
+                                android:layout_height="@dimen/dimen_40"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center"
+                                app:srcCompat="@drawable/ic_plus" />
+
+                            <ImageView
+                                android:id="@+id/ivSelectDin"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="fitXY"
+                                android:visibility="gone" />
+
+
+                        </androidx.cardview.widget.CardView>
+
+
+                        <RelativeLayout
+                            android:id="@+id/rlCancelDin"
+                            android:layout_width="24dp"
+                            android:background="@drawable/shape_circle_white"
+                            android:layout_height="24dp"
+                            android:layout_alignParentRight="true"
+                            android:elevation="3dp"
+
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_centerInParent="true"
+                                android:tint="@color/light_red"
+                                app:srcCompat="@drawable/ic_cancel" />
+
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rlDin"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center"
+                            android:text="DIN"
+                            android:textColor="@android:color/black" />
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/rlOthers"
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:layout_marginLeft="@dimen/dimen_5"
+                                android:layout_marginBottom="@dimen/dimen_5"
+                                android:layout_marginRight="@dimen/dimen_5"
+                                android:layout_marginTop="@dimen/dimen_5"
+
+                                android:background="@drawable/cardview_back"
+                                android:orientation="vertical"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="2dp">
+
+                                <ImageView
+                                    android:id="@+id/ivAddOthers"
+                                    android:layout_width="@dimen/dimen_40"
+                                    android:layout_height="@dimen/dimen_40"
+                                    android:layout_centerInParent="true"
+                                    android:layout_gravity="center"
+                                    app:srcCompat="@drawable/ic_plus" />
+
+                                <ImageView
+                                    android:id="@+id/ivSelectOther"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="fitXY"
+                                    android:visibility="gone" />
+
+
+                            </androidx.cardview.widget.CardView>
+
+
+                            <RelativeLayout
+                                android:id="@+id/rlOthersClose"
+                                android:layout_width="24dp"
+                                android:background="@drawable/shape_circle_white"
+                                android:layout_height="24dp"
+                                android:layout_alignParentRight="true"
+                                android:elevation="3dp"
+
+                                android:visibility="gone">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:layout_centerInParent="true"
+                                    android:tint="@color/light_red"
+                                    app:srcCompat="@drawable/ic_cancel" />
+
+                            </RelativeLayout>
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/rlOthers"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:gravity="center"
+                                android:text="Others"
+                                android:textColor="@android:color/black" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:id="@+id/ivCheck"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:tint="@color/light_red"
+                        app:srcCompat="@drawable/ic_basic_square" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="I accept "
+                        android:textColor="@android:color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:fontFamily="@font/poppins_regular"
+
+
+                        android:text="Terms and conditions "
+                        android:textColor="@color/light_red"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:fontFamily="@font/poppins_regular"
+
+
+                        android:text="and "
+                        android:textColor="@android:color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:fontFamily="@font/poppins_regular"
+
+                        android:text="privacy policy"
+                        android:textColor="@color/light_red"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/btnSave"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="@dimen/dimen_30"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginRight="50dp"
+                    android:background="@drawable/shape_btn_curve"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Save"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
